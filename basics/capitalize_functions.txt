@@ -1,0 +1,36 @@
+/******************************************************************************************
+* Name: capitalize_functions                                                              *
+* Purpose: These functions convert all characters of a string to uppercase.               *
+* Author: Wesley                                                                          *
+* Context: practice programs while studying the C programming language.                   *
+* Concepts used: Arrays, Pointers, Loops, Functions.                                      *
+******************************************************************************************/
+
+
+// the following versions of the capitalize function capitalizes all letters 
+// in its argument. it's assumend that the argument will be a null-terminated
+// string containing arbitrary characters.
+
+
+
+
+
+// 1-- In this version, ARRAY SUBSCRIPTING is used to access the characters. 
+
+	void capitalize (char const *str, int n){
+		for(i = 0; i < n; i++)
+		     str[i] = toupper(str[i]);
+		 return;
+	}
+
+
+
+
+
+// 2-- In this version, POINTER ARITHMETIC is used to access the characters.
+
+	void capitalize (char *str){
+		while(*str)
+		    *str++ = toupper(*str);
+		return;
+	}
