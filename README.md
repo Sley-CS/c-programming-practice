@@ -10,6 +10,7 @@
 					- Arrays
 					- Basic string manipulation
 
-			    Background: Freshman student majoring in computer science with interests in AI, software engineering, networking, robotics and systems engineering.
+			    Background: Freshman student majoring in computer science with interests in AI,
+				 software engineering, networking, robotics and systems engineering.
 
 			    Goal : Build strong low-level programming foundations.
