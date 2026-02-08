@@ -1,0 +1,35 @@
+/*****************************************************************************************************
+* Name: get_extension.c                                                                              * 
+* Purpose: this function store the extension on a file name in the a string pointed to by extension. * 
+*          if the file name doesn't have an extension, the function should store an empty string in  *
+*          the string pointed to by extension. it uses the strlen and strcpy functions               *
+* Author: Wesley                                                                                     *
+* Context: practice programs while studying the C programming language.                              *
+* Concepts used: Arrays, Pointers, Loops, strlen and strcpy unctions.                                *
+*****************************************************************************************************/
+
+
+  void get_extension (const char *file_name[], char *extension){
+       char *p = &file_name[strlen(file_name) - 4);
+       while (*p)
+          if(*p == '.'){
+              p++;
+              strcpy(extension, p);
+              return;
+          } else
+                p++;
+                *extension = '\0';
+}
+
+
+
+// another version of the same function
+       void get_extension (const char *file_name[], char *extension){
+            char *p = &file_name[strlen(file_name) - 4);
+              for( ; (*p != '.' && *p != '\0'); p++) {
+                  if(*p == '.'){
+                    strcpy(extension, p);
+                    return;
+                   }
+                   *extension = *p;
+              }
